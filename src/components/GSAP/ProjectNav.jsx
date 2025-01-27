@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectNav = ({ Title, link, Hover }) => {
+  const handleReload = () => {
+    window.location.reload();
+    window.location.href = link;
+  };
   return (
     <div id="page-nav">
       <div class="page-nav-wrap">
@@ -11,16 +15,16 @@ const ProjectNav = ({ Title, link, Hover }) => {
               <span>Cari tau tentang apa itu ICOFIT</span>
             </div>
             <br />
-            <a
+            <Link
+              to={link}
               class="page-title next-ajax-link-page"
               data-type="page-transition"
               data-centerline={Hover}
-              href="/about"
             >
               <div class="next-hero-title primary-font-title caption-timeline">
                 <span>{Title}</span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
