@@ -14,8 +14,7 @@ const ProjectNav = ({ Title, link, Hover }) => {
             <br />
             <Link
              
-              class="page-title next-ajax-link-page"
-              data-type="page-transition"
+             
               data-centerline={Hover}
               to="/about"
             >
