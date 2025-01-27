@@ -20,7 +20,7 @@ const ProjectNav = ({ Title, link, Hover }) => {
               class="page-title next-ajax-link-page"
               data-type="page-transition"
               data-centerline={Hover}
-        
+              to="/about"
             >
               <div class="next-hero-title primary-font-title caption-timeline">
                 <span>{Title}</span>
