@@ -2,10 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectNav = ({ Title, link, Hover }) => {
-    const handleReload = () => {
-        window.location.reload();
-        window.location.href = link;
-    }
+
   return (
     <div id="page-nav">
       <div class="page-nav-wrap">
@@ -16,7 +13,7 @@ const ProjectNav = ({ Title, link, Hover }) => {
             </div>
             <br />
             <Link
-              onClick={handleReload}
+             
               class="page-title next-ajax-link-page"
               data-type="page-transition"
               data-centerline={Hover}
