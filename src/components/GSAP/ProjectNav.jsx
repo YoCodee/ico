@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectNav = ({ Title, link, Hover }) => {
-
   return (
     <div id="page-nav">
       <div class="page-nav-wrap">
@@ -12,16 +11,16 @@ const ProjectNav = ({ Title, link, Hover }) => {
               <span>Cari tau tentang apa itu ICOFIT</span>
             </div>
             <br />
-            <Link
-             
-             
+            <a
+              class="page-title next-ajax-link-page"
+              data-type="page-transition"
               data-centerline={Hover}
-              to="/about"
+              href="/about"
             >
               <div class="next-hero-title primary-font-title caption-timeline">
                 <span>{Title}</span>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
