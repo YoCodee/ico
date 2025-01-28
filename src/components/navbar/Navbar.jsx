@@ -17,12 +17,12 @@ const Navbar = ({icon}) => {
         >
           <img
             class="black-logo"
-            src={`./public/image/pro-index/${icon}`}
+            src={`image/pro-index/${icon}`}
             alt="ChurchViz Logo"
           />
           <img
             class="white-logo"
-            src={`./public/image/pro-index/${icon}`}
+            src={`image/pro-index/${icon}`}
             alt="ChurchViz Logo"
           />
         </a>
