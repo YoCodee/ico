@@ -1,6 +1,11 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import "../../../style/hovercub.css";
 const MainCompJual = () => {
+  const handleReload = () => {
+    window.location.reload();
+    window.location.href = "/shopp";
+  };
   return (
     <>
       <div id="main-page-content">
@@ -150,7 +155,12 @@ const MainCompJual = () => {
         <div
           class="content-row row_padding_top dark-section"
           data-bgcolor="#1c1e1c"
-        ></div>
+        >
+          {" "}
+          <Link className="link-container" onClick={handleReload}>
+            <h1>Ayo Masuk MarketPlace kami</h1>
+          </Link>
+        </div>
       </div>
     </>
   );

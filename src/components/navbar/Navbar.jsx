@@ -18,12 +18,12 @@ const Navbar = ({icon}) => {
           <img
             class="black-logo"
             src={`image/pro-index/${icon}`}
-            alt="ChurchViz Logo"
+            alt="icofit"
           />
           <img
             class="white-logo"
             src={`image/pro-index/${icon}`}
-            alt="ChurchViz Logo"
+            alt="icofit"
           />
         </a>
       </div>
