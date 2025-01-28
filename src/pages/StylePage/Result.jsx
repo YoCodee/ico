@@ -4,10 +4,10 @@ import "../../style/Result.css";
 import { Link } from "react-router-dom";
 import ProjectNav from "../../components/GSAP/ProjectNav";
 const Result = () => {
-    const next = () => {
-        window.location.reload();
-        window.location.href = "/";
-    }
+  const next = () => {
+    window.location.reload();
+    window.location.href = "/";
+  };
   // Fungsi untuk mengambil query parameter dari URL
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -127,6 +127,21 @@ const Result = () => {
           )}
         </div>
       </div>
+      <div class="content-row full dark-section" data-bgcolor="#171717">
+        <figure class="has-parallax has-parallax-content" data-delay="100">
+          <img src="image/about/FIT.png" alt="Image Title" />
+          <div class="parallax-image-content content-max-width text-align-center">
+            <div class="outer">
+              <div class="inner">
+                <h2 class="big-title has-mask-fill primary-font-title">
+                  Hasil Rekomendasi ini didapat dari Hasil dari Pilihanmu dan
+                  Hasil ini bersifat subjektif berdasarkan jawaban anda.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
       <div id="page-nav">
         <div class="page-nav-wrap">
           <div class="page-nav-caption content-full-width text-align-center height-title">
@@ -140,7 +155,6 @@ const Result = () => {
                 class="page-title next-ajax-link-page"
                 data-type="page-transition"
                 data-centerline="Home."
-            
               >
                 <div class="next-hero-title primary-font-title caption-timeline">
                   <span>Home.</span>

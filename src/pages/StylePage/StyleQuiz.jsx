@@ -55,7 +55,8 @@ const StyleQuiz = () => {
         {page === 1 && (
           <div className="container active">
             <p className="question">
-              Apakah anda lebih suka berada di rumah atau keluar?
+              Apakah anda lebih <span className="satu">suka</span> berada di
+              rumah atau keluar?
             </p>
             <div className="options">
               <label>
@@ -86,7 +87,8 @@ const StyleQuiz = () => {
         {page === 2 && (
           <div className="container active">
             <p className="question">
-              Apakah anda sangat percaya diri dengan diri anda?
+              Apakah anda sangat <span className="dua"> percaya diri</span>{" "}
+              dengan diri anda?
             </p>
             <div className="options">
               <label>
@@ -116,7 +118,9 @@ const StyleQuiz = () => {
 
         {page === 3 && (
           <div className="container active">
-            <p className="question">Warna apa yang anda sukai?</p>
+            <p className="question">
+              <span className="tiga">Warna</span> apa yang anda sukai?
+            </p>
             <div className="options">
               <label>
                 <input
@@ -145,7 +149,9 @@ const StyleQuiz = () => {
 
         {page === 4 && (
           <div className="container active">
-            <p className="question">Rentang usia anda berapa?</p>
+            <p className="question">
+              Rentang <span className="empat">usia</span> anda berapa?
+            </p>
             <div className="options">
               <label>
                 <input
@@ -183,7 +189,9 @@ const StyleQuiz = () => {
 
         {page === 5 && (
           <div className="container active">
-            <p className="question">Apa gender anda?</p>
+            <p className="question">
+              Apa <span className="lima">gender</span> anda?
+            </p>
             <div className="options">
               <label>
                 <input

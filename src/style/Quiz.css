@@ -44,9 +44,41 @@ h1 {
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
-  line-height: 2.2rem;
+  line-height: 2.9rem;
   color: #555;
 }
+
+.question .satu {
+  padding: 6px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+}
+.question .dua {
+  padding: 6px;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+}
+.question .tiga {
+  padding: 6px;
+  background-color: cyan;
+  color: white;
+  border-radius: 15px;
+}
+.question .empat {
+  padding: 6px;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+.question .lima {
+  padding: 6px;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+}
+
 .options {
   text-align: left;
   margin-bottom: 30px;
