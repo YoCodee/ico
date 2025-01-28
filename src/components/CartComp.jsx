@@ -56,22 +56,7 @@ const CartComp = ({
           <div class="carousel">
             <ul class="carousel-container">
               <li>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg"
-                  alt=""
-                />
-              </li>
-              <li>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2.jpg"
-                  alt=""
-                />
-              </li>
-              <li>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg"
-                  alt=""
-                />
+                <img src={image} alt="" />
               </li>
             </ul>
             <div class="arrows-perspective">

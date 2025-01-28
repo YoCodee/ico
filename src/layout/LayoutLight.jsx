@@ -6,7 +6,6 @@ const LayoutLight = () => {
   return (
     <>
       <main>
-        <Loading />
         <div class="cd-index cd-main-content">
           <div
             id="clapat-page-content"

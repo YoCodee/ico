@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CartComp from "./CartComp";
 import products from "../data/productData";
 
 const ProductCart = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedSize, setSelectedSize] = useState([]);
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
+  // Handle category checkbox change
   const handleCategoryChange = (category) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -14,22 +15,38 @@ const ProductCart = () => {
     );
   };
 
-  const handleSizeChange = (Size) => {
-    setSelectedSize((prev) =>
-      prev.includes(Size) ? prev.filter((s) => s !== Size) : [...prev, Size]
+  // Handle size checkbox change
+  const handleSizeChange = (size) => {
+    setSelectedSizes((prev) =>
+      prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size]
     );
   };
-  
 
+  // Filter logic for products
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       selectedCategories.length === 0 ||
       selectedCategories.includes(product.category);
+
     const matchesSize =
-      selectedSize.length === 0 ||
-      selectedSize.some((Size) => product.Size.includes(Size));
+      selectedSizes.length === 0 ||
+      selectedSizes.some((size) => product.Size.includes(size));
+
     return matchesCategory && matchesSize;
   });
+
+  // Effect to reload page when no filters are applied, and store in localStorage to prevent endless reload
+  useEffect(() => {
+    if (selectedCategories.length === 0 && selectedSizes.length === 0) {
+      const reloadStatus = localStorage.getItem("pageReloaded");
+      if (!reloadStatus) {
+        localStorage.setItem("pageReloaded", "true");
+        window.location.reload();
+      }
+    } else {
+      localStorage.removeItem("pageReloaded");
+    }
+  }, [selectedCategories, selectedSizes]);
 
   return (
     <div id="wrapper" style={{ marginTop: "70px" }}>
@@ -46,7 +63,7 @@ const ProductCart = () => {
         <h3>CATEGORIES</h3>
         <div className="checklist categories">
           <ul>
-            {["Baju", "Celana"].map((category) => (
+            {["Baju", "Celana", "Aksesoris", "Outer"].map((category) => (
               <li key={category}>
                 <label>
                   <input
@@ -65,16 +82,16 @@ const ProductCart = () => {
         <h3>SIZES</h3>
         <div className="checklist sizes">
           <ul>
-            {["XS", "S", "M", "L", "XL", "XXL"].map((Size) => (
-              <li key={Size}>
+            {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
+              <li key={size}>
                 <label>
                   <input
                     type="checkbox"
-                    value={Size}
-                    onChange={() => handleSizeChange(Size)}
-                    checked={selectedSize.includes(Size)}
+                    value={size}
+                    onChange={() => handleSizeChange(size)}
+                    checked={selectedSizes.includes(size)}
                   />
-                  {Size}
+                  {size}
                 </label>
               </li>
             ))}
