@@ -16,7 +16,7 @@ const ProjectNav = ({ Title, link, Hover }) => {
             </div>
             <br />
             <Link
-              to={link}
+              onClick={handleReload}
               class="page-title next-ajax-link-page"
               data-type="page-transition"
               data-centerline={Hover}
